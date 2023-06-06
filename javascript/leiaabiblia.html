@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>        
+        <title>Teste Javascript</title>
+        <meta charset="utf-8">
+        <script>
+            var leiaABiblia = false;
+            function mudaBiblia(tipo) {
+                if (!leiaABiblia) {
+                    document.getElementById("estado").src = "imagens2/" + tipo + ".jpg";                             
+                    if(tipo == 'leia'){
+                    leiaABiblia = true;
+                    }
+                } 
+            }
+        </script>
+    </head>
+    <body>
+        <h1>A Bíblia fechada é como um livro comum...</h1>
+        <img src="imagens2/biblia-fechada.jpg" id="estado" onmousemove="mudaBiblia('biblia-aberta')" onmouseout="mudaBiblia('biblia-fechada')" onclick="mudaBiblia('leia')" />
+        <h1>ela aberta é a boca de Deus falando!"</h1>
+</html>
